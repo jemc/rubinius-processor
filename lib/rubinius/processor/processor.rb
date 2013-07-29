@@ -1,4 +1,4 @@
-module Rubinius
+module Rubinius::ToolSet.current::TS
   class Processor
     def process_parse_error(message, column, line, source)
       msg = "#{message}: #{@name}:#{line}:#{column}"
