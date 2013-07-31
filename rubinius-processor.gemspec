@@ -1,16 +1,14 @@
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'rubinius/processor/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "rubinius-processor"
-  spec.version       = Rubinius::Processor::VERSION
+  spec.version       = Rubinius::ToolSet.current::TS::Processor::VERSION
   spec.authors       = ["Brian Shirai"]
   spec.email         = ["brixen@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{Converts Melbourne parse tree into an AST.}
+  spec.summary       = %q{Converts Melbourne parse tree into an AST.}
+  spec.homepage      = "https://github.com/rubinius/rubinius-processor"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
