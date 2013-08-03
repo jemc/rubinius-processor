@@ -1,5 +1,7 @@
 module Rubinius::ToolSet.current::TS
-  class Processor
+  # TODO: This will change to:
+  # class Processor
+  class Melbourne
     def process_parse_error(message, column, line, source)
       msg = "#{message}: #{@name}:#{line}:#{column}"
       @syntax_errors << SyntaxError.from(msg, column, line, source, @name)
