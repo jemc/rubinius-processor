@@ -1,5 +1,6 @@
 # coding: utf-8
-require 'rubinius/processor/version'
+require 'rubinius/toolset'
+require './lib/rubinius/processor/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "rubinius-processor"
@@ -9,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{Converts Melbourne parse tree into an AST.}
   spec.summary       = %q{Converts Melbourne parse tree into an AST.}
   spec.homepage      = "https://github.com/rubinius/rubinius-processor"
-  spec.license       = "MIT"
+  spec.license       = "BSD"
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
@@ -17,5 +18,5 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.3"
-  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rake"' "~> 10.0"
 end
