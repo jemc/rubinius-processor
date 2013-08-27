@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{Converts Melbourne parse tree into an AST.}
   spec.summary       = %q{Converts Melbourne parse tree into an AST.}
   spec.homepage      = "https://github.com/rubinius/rubinius-processor"
-  spec.license       = "MIT"
+  spec.license       = "BSD"
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
