@@ -1,4 +1,4 @@
-module Rubinius::ToolSet.current::ToolSet
+module Rubinius::ToolSets.current::ToolSet
   class Processor
     VERSION = "2.0.1"
   end
