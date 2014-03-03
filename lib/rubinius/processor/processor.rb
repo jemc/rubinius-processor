@@ -1,4 +1,4 @@
-module Rubinius::ToolSet.current::ToolSet
+module Rubinius::ToolSets.current::ToolSet
   # TODO: This will change to:
   # class Processor
   class Melbourne
