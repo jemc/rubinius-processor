@@ -20,7 +20,7 @@ module Rubinius::ToolSets.current::ToolSet
 
     # TODO: remove when all processors are defined
     def method_missing(sym, *args)
-      puts " *** missing #{sym} #{args.map { |x| x.inspect}.join(", ")}"
+      puts "#{self.class}#method_missing: #{sym} #{args.map { |x| x.inspect}.join(", ")}"
     end
 
 
