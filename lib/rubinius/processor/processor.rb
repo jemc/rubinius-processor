@@ -651,7 +651,7 @@ module Rubinius::ToolSets.current::ToolSet
         body = scope
       end
 
-      receiver = AST::Self.new line
+      receiver = AST::ToplevelConstant.new line, :Kernel
       method_send = AST::Send.new line, receiver, :lambda, true
 
       method_send.block = AST::Iter19.new line, arguments, body
