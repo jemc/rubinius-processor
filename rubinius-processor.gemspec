@@ -1,10 +1,9 @@
 # coding: utf-8
-require 'rubinius/toolset'
 require './lib/rubinius/processor/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "rubinius-processor"
-  spec.version       = Rubinius::ToolSets.current::ToolSet::Processor::VERSION
+  spec.version       = CodeTools::Processor::VERSION
   spec.authors       = ["Brian Shirai"]
   spec.email         = ["brixen@gmail.com"]
   spec.description   = %q{Converts Melbourne parse tree into an AST.}

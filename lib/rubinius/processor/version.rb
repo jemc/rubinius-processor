@@ -1,4 +1,4 @@
-module Rubinius::ToolSets.current::ToolSet
+module CodeTools
   class Processor
     VERSION = "2.1.2"
   end
