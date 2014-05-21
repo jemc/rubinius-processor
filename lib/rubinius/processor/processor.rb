@@ -34,8 +34,8 @@ module CodeTools
       AST::And.new line, left, right
     end
 
-    def process_args(line, required, optional, splat, post, block)
-      AST::FormalArguments19.new line, required, optional, splat, post, block
+    def process_args(line, required, optional, splat, post, kwargs, kwrest, block)
+      AST::FormalArguments.new line, required, optional, splat, post, kwargs, kwrest, block
     end
 
     def process_argscat(line, array, rest)
@@ -303,7 +303,7 @@ module CodeTools
       end
 
       unless arguments
-        arguments = AST::FormalArguments19.new line, nil, nil, nil, nil, nil
+        arguments = AST::FormalArguments.new line, nil, nil, nil, nil, nil, nil, nil
       end
 
       case ary.size
@@ -325,6 +325,10 @@ module CodeTools
 
     def process_ivar(line, name)
       AST::InstanceVariableAccess.new line, name
+    end
+
+    def process_kw_arg(line, arguments)
+      AST::Block.new line, arguments
     end
 
     def process_lambda(line, scope)
