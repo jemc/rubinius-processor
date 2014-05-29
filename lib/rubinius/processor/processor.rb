@@ -339,11 +339,7 @@ module CodeTools
         body = scope
       end
 
-      receiver = AST::ToplevelConstant.new line, :Kernel
-      method_send = AST::Send.new line, receiver, :lambda, true
-
-      method_send.block = AST::Iter19.new line, arguments, body
-      method_send
+      AST::Lambda.new line, arguments, body
     end
 
 
