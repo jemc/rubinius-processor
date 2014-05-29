@@ -319,7 +319,7 @@ module CodeTools
         body = scope
       end
 
-      method_send.block = AST::Iter19.new line, arguments, body
+      method_send.block = AST::Iter.new line, arguments, body
       method_send
     end
 
@@ -440,7 +440,7 @@ module CodeTools
 
     def process_preexe(line, body)
       node = AST::PreExe19.new line
-      node.block = AST::Iter19.new line, nil, body
+      node.block = AST::Iter.new line, nil, body
       add_pre_exe node
       node
     end
