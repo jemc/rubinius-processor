@@ -294,6 +294,10 @@ module CodeTools
       AST::If.new line, cond, body, else_body
     end
 
+    def process_imaginary(line, value)
+      AST::ImaginaryLiteral.new line, value
+    end
+
     def process_iter(line, method_send, scope)
       ary = scope && scope.array || []
       arguments = nil
@@ -443,6 +447,10 @@ module CodeTools
       node.block = AST::Iter.new line, nil, body
       add_pre_exe node
       node
+    end
+
+    def process_rational(line, value)
+      AST::RationalLiteral.new line, value
     end
 
     def process_redo(line)
