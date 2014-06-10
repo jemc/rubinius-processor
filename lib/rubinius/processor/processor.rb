@@ -35,7 +35,7 @@ module CodeTools
     end
 
     def process_args(line, required, optional, splat, post, kwargs, kwrest, block)
-      AST::FormalArguments.new line, required, optional, splat, post, kwargs, kwrest, block
+      AST::Parameters.new line, required, optional, splat, post, kwargs, kwrest, block
     end
 
     def process_argscat(line, array, rest)
@@ -302,12 +302,12 @@ module CodeTools
       ary = scope && scope.array || []
       arguments = nil
 
-      if ary.first.kind_of? AST::FormalArguments
+      if ary.first.kind_of? AST::Parameters
         arguments = scope.array.shift
       end
 
       unless arguments
-        arguments = AST::FormalArguments.new line, nil, nil, nil, nil, nil, nil, nil
+        arguments = AST::Parameters.new line, nil, nil, nil, nil, nil, nil, nil
       end
 
       case ary.size
