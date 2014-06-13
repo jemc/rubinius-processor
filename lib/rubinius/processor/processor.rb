@@ -270,7 +270,7 @@ module CodeTools
 
     def process_for(line, iter, arguments, body)
       send = AST::Send.new line, iter, :each
-      send.block = AST::For19.new line, arguments, body
+      send.block = AST::For.new line, arguments, body
       send
     end
 
