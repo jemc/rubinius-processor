@@ -307,7 +307,7 @@ module CodeTools
       end
 
       unless arguments
-        arguments = AST::Parameters.new line, nil, nil, nil, nil, nil, nil, nil
+        arguments = AST::Parameters.new line
       end
 
       case ary.size
