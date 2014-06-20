@@ -409,11 +409,11 @@ module CodeTools
     end
 
     def process_op_asgn1(line, receiver, index, op, value)
-      AST::OpAssign1.new line, receiver, index, op, value
+      AST::OpAssignElement.new line, receiver, index, op, value
     end
 
     def process_op_asgn2(line, receiver, name, op, value)
-      AST::OpAssign2.new line, receiver, name, op, value
+      AST::OpAssignAttribute.new line, receiver, name, op, value
     end
 
     def process_op_asgn_and(line, var, value)
@@ -421,7 +421,7 @@ module CodeTools
     end
 
     def process_op_asgn_or(line, var, value)
-      AST::OpAssignOr19.new line, var, value
+      AST::OpAssignOr.new line, var, value
     end
 
     def process_opt_arg(line, arguments)
